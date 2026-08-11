@@ -1,41 +1,36 @@
-import Header from "./components/Header";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Footer from "./components/Footer";
+import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+
 import NavBar from "./components/NavBar";
+import Home from "./components/Home";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import NotFound from "./components/NotFound";
 
 function App() {
-  const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Git and GitHub"
-  ];
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    document.body.className = darkMode ? "dark-mode" : "light-mode";
+  }, [darkMode]);
 
   return (
-    <div>
-      <NavBar activeSection="Home" />
+    <div className="app">
+      <NavBar />
 
-      <Header
-        name="Aaron"
-        themeColor="#2563eb"
-      />
+      <button
+        className="theme-button"
+        onClick={() => setDarkMode((previous) => !previous)}
+      >
+        {darkMode ? "Light Mode" : "Dark Mode"}
+      </button>
 
-      <About
-        bio="I am a student learning web development and React."
-      />
-
-      <Skills
-        skillList={skills}
-      />
-      
-      <Projects />
-
-      <Footer
-        email="24dce072@charusat.edu.in"
-      />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }

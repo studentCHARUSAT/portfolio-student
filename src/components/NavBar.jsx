@@ -1,12 +1,11 @@
-function NavBar({ activeSection }) {
+import { Link } from "react-router-dom";
+
+function NavBar() {
   return (
     <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-
-      <span>Active: {activeSection}</span>
+      <Link to="/">Home</Link>
+      <Link to="/projects">Projects</Link>
+      <Link to="/contact">Contact</Link>
     </nav>
   );
 }
