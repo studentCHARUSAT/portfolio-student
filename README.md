@@ -1,16 +1,77 @@
-# React + Vite
+# Student Portfolio - React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A student portfolio website developed using React and Vite as part of Web Sem 5 practical work.
 
-Currently, two official plugins are available:
+## Practical 1 - React and Component Architecture
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The portfolio was created using reusable React functional components.
 
-## React Compiler
+### Components
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Header
+- About
+- Skills
+- Projects
+- NavBar
+- Footer
 
-## Expanding the ESLint configuration
+### Concepts Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- JSX
+- Functional Components
+- Props
+- Component Reusability
+- Array Rendering using map()
+
+## Practical 2 - State Management and Routing
+
+The portfolio was extended with React Router and state management.
+
+### Routes
+
+- `/` - Home page
+- `/projects` - Projects page
+- `/contact` - Contact page
+- `*` - 404 Not Found page
+
+### React Concepts Used
+
+- BrowserRouter
+- Routes and Route
+- Link
+- useState
+- Controlled Form Input
+- State-based UI updates
+- Dark/Light Mode
+
+### Contact Form
+
+The Contact page contains a controlled input using `useState`.
+
+The entered message is displayed in real time and a live character count is shown.
+
+A help section can also be shown or hidden using state.
+
+### Dark/Light Mode
+
+A dark/light mode toggle was implemented using `useState`.
+
+## Technologies Used
+
+- React
+- Vite
+- JavaScript
+- React Router
+- HTML
+- CSS
+- Git
+- GitHub
+
+## How to Run
+
+Install the project dependencies:
+
+```bash
+npm install
