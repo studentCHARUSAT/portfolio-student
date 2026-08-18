@@ -75,3 +75,32 @@ Install the project dependencies:
 
 ```bash
 npm install
+
+## Practical 3 - API Integration and Data Rendering
+
+The Projects page was integrated with the GitHub REST API to fetch and display repository data dynamically.
+
+### API Used
+
+GitHub REST API:
+
+https://api.github.com/users/studentCHARUSAT/repos
+
+### Features
+
+- Fetches repositories using the Fetch API
+- Uses `useEffect()` to trigger the API request
+- Uses `useState()` for repository data, loading, and error states
+- Displays a loading message while data is being fetched
+- Displays an error message when the API request fails
+- Includes a Retry button
+- Displays repository name and GitHub URL
+- Displays repository star count
+- Includes a search input to filter repositories by name
+
+### API Components
+
+- `Projects.jsx` - Handles API fetching and state
+- `Spinner.jsx` - Displays the loading state
+- `ErrorMessage.jsx` - Displays errors and retry option
+- `RepoList.jsx` - Displays repository data
