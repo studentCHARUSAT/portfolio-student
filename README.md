@@ -2,6 +2,8 @@
 
 A student portfolio website developed using React and Vite as part of Web Sem 5 practical work.
 
+---
+
 ## Practical 1 - React and Component Architecture
 
 The portfolio was created using reusable React functional components.
@@ -24,6 +26,8 @@ The portfolio was created using reusable React functional components.
 - Props
 - Component Reusability
 - Array Rendering using map()
+
+---
 
 ## Practical 2 - State Management and Routing
 
@@ -58,23 +62,7 @@ A help section can also be shown or hidden using state.
 
 A dark/light mode toggle was implemented using `useState`.
 
-## Technologies Used
-
-- React
-- Vite
-- JavaScript
-- React Router
-- HTML
-- CSS
-- Git
-- GitHub
-
-## How to Run
-
-Install the project dependencies:
-
-```bash
-npm install
+---
 
 ## Practical 3 - API Integration and Data Rendering
 
@@ -84,14 +72,14 @@ The Projects page was integrated with the GitHub REST API to fetch and display r
 
 GitHub REST API:
 
-https://api.github.com/users/studentCHARUSAT/repos
+`https://api.github.com/users/studentCHARUSAT/repos`
 
 ### Features
 
 - Fetches repositories using the Fetch API
 - Uses `useEffect()` to trigger the API request
 - Uses `useState()` for repository data, loading, and error states
-- Displays a loading message while data is being fetched
+- Displays a loading spinner while data is being fetched
 - Displays an error message when the API request fails
 - Includes a Retry button
 - Displays repository name and GitHub URL
@@ -104,3 +92,26 @@ https://api.github.com/users/studentCHARUSAT/repos
 - `Spinner.jsx` - Displays the loading state
 - `ErrorMessage.jsx` - Displays errors and retry option
 - `RepoList.jsx` - Displays repository data
+
+---
+
+## Technologies Used
+
+- React
+- Vite
+- JavaScript
+- React Router
+- Fetch API
+- HTML
+- CSS
+- Git
+- GitHub
+
+---
+
+## How to Run
+
+### 1. Clone the repository
+
+```bash
+git clone <your-github-repository-url>
