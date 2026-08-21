@@ -22,16 +22,15 @@ function App() {
       <AnimatedBackground />
 
       <div className="app">
-
-        {/* Navigation */}
         <NavBar />
 
         {/* Dark / Light mode */}
         <button
           className="theme-button"
+          aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
           onClick={() => setDarkMode((previous) => !previous)}
         >
-          {darkMode ? "Light Mode" : "Dark Mode"}
+          <span aria-hidden="true">{darkMode ? "Light" : "Dark"}</span> mode
         </button>
 
         {/* Page content */}

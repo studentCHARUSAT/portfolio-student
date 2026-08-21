@@ -18,6 +18,7 @@ function Projects() {
         if (!res.ok) {
           throw new Error("Failed to fetch repositories");
         }
+
         return res.json();
       })
       .then((data) => {
@@ -53,13 +54,14 @@ function Projects() {
 
       <p>Repositories fetched from the GitHub API:</p>
 
-      <input
-        type="text"
-        placeholder="Search repositories..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-
+   <div className="search-wrapper">
+  <input
+    type="text"
+    placeholder="Search repositories..."
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+  />
+</div>
       <RepoList repos={filteredRepos} />
     </section>
   );
